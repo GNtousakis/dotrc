@@ -29,4 +29,9 @@ Plug 'mbbill/undotree'
 
 call plug#end()
 
+" Map keys
+let mapleader = " "
 
+nnoremap <leader>p :vsplit<CR>
+nnoremap <leader>o :split<CR> 
+nnoremap <leader>f :wincmd v<bar> :Explore<bar> :vertical resize 30<CR>
