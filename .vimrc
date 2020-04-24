@@ -34,4 +34,5 @@ let mapleader = " "
 
 nnoremap <leader>p :vsplit<CR>
 nnoremap <leader>o :split<CR> 
-nnoremap <leader>f :wincmd v<bar> :Explore<bar> :vertical resize 30<CR>
+nnoremap <leader>f :wincmd v<bar> :Explore<CR>
+nnoremap <leader>u :UndotreeShow<CR>
