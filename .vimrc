@@ -1,4 +1,4 @@
-"------------------------------------------------------------
+" ------------------------------------------------------------
 " Features
 
 syntax on
@@ -26,8 +26,20 @@ call plug#begin('~/.vim/plugged')
 Plug 'ycm-core/YouCompleteMe'
 Plug 'morhetz/gruvbox'
 Plug 'mbbill/undotree'
+Plug 'preservim/nerdtree'
 
 call plug#end()
+
+" Configure NERDTree
+
+" This line closes nerd tree if it the last thing open on vim
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" Open NERDTree automaticaly when no file is specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+
+
 
 " Map keys
 let mapleader = " "
@@ -36,5 +48,6 @@ nnoremap <leader>p :vsplit<CR>
 nnoremap <leader>o :split<CR> 
 nnoremap <leader>f :wincmd v<bar> :Explore<CR>
 nnoremap <leader>u :UndotreeShow<CR>
-
+nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>w <C-W>w
+
