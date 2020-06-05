@@ -16,3 +16,10 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 # Install powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>! ~/.zshrc
+
+cp ../.zshrc ../../
+
+# I install ruby in order to install colorls
+sudo apt install ruby-full
+sudo gem install colorls
+
