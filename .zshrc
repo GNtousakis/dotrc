@@ -37,6 +37,9 @@ alias l='colorls --group-directories-first'
 alias ls='colorls --group-directories-first'
 alias cl='clear'
 
+alias gpl='git pull'
+alias gs='git status'  
+
 alias ..='cd ..'
 alias .....='cd ../..'
 
@@ -44,3 +47,7 @@ alias .....='cd ../..'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#This is for the node manager --nvm
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
